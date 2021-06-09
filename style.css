@@ -52,7 +52,6 @@
 }
 
 .archival_post {
-  
   margin: 0 15px 15px 15px;
   padding: 15px;
   border: 1px black solid
@@ -78,13 +77,14 @@
   margin: 15px;
   border: 1px black solid;
   display: flex;
-  width: 60%;
 }
 
 .post_details {
   margin: 15px;
   border-right: 1px black solid;
+  padding-right: 10px;
 }
+
 .votes {
   display: flex;
   flex-direction: column;
