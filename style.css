@@ -3,34 +3,43 @@
 }
 
 .formular {
-  width: 90%;
+  width: 95%;
+}
+
+.form_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form_submit {
   font-family: system-ui;
   border-bottom: 1px black solid;
-  margin: 15px;
-  padding: 10px;
+  margin: 0 15px 15px 0px;
+  padding: 0 10px 10px 10px;
 }
 
 .title {
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 .text {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  width: 60%;
 }
 
 .text_input {
-  width: 75%;
+  width: 100%;
   margin-bottom: 5px;
 }
 
 .title_input {
-  width: 75%;
+  width: 100%;
 }
 
 .blog {
@@ -52,9 +61,9 @@
 }
 
 .archival_post {
-  margin: 0 15px 15px 15px;
+  margin: 15px;
   padding: 15px;
-  border: 1px black solid
+  border-right: 1px black solid
 }
 
 .list {
@@ -64,6 +73,7 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  min-height: 200px;
 }
 
 .body_posts tr {
@@ -75,7 +85,13 @@
 
 .posts {
   margin: 15px;
-  border: 1px black solid;
+  border: 1px #3b5998 solid;
+  display: flex;
+}
+
+.old_posts{
+  margin: 15px;
+  border: 1px #3b5998 solid;
   display: flex;
 }
 
@@ -123,4 +139,5 @@
 .title_section {
   font-family: system-ui;
   margin: 0 15px 0 15px ;
+  padding: 0;
 }

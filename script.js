@@ -19,9 +19,9 @@ const addNewPost = (dataPost) => {
         'beforeend',
         `<div class="posts">
             <div class="post_details">
-            <h2>${dataPost.Title}</h2>
-            <p>${dataPost.Text}</p>
-            <button onClick="removePost(this)">Delete</button>
+                <h2>${dataPost.Title}</h2>
+                <p>${dataPost.Text}</p>
+                <button onClick="removePost(this)">Delete</button>
             </div>
             <div class="votes">
                 <p class="votes_p">votes</p>
@@ -62,9 +62,25 @@ const data = () => {
         data.map(function(post){
             postList.insertAdjacentHTML(
                 'beforeend', 
-                `<div id="two" class="archival_post">
-                    <h2>${post.title}</h2>
-                    <p>${post.text}</p>
+                `<div class="old_posts">
+                    <div id="two" class="archival_post">
+                        <h2>${post.title}</h2>
+                        <p>${post.text}</p>
+                        <button>Delete</button>
+                    </div>
+                    <div class="votes">
+                        <p class="votes_p">votes</p>
+                        <div class="vote_buttons">
+                            <div class="button_column">
+                                <p id="numberPlus">0</p>
+                                <button id="increment" class="vote_button">+</button>
+                            </div>
+                            <div class="button_column">
+                                <p id="numberMinus">0</p>
+                                <button id="decrement" class="vote_button">-</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>`
             )
         });
