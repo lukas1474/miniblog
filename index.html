@@ -12,14 +12,14 @@
   <table class="formular">
     <tr>
       <td>
-        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
-          <div>
+        <form onsubmit="event.preventDefault(); onFormSubmit(); " autocomplete="off" class="form_submit">
+          <div class="title">
             <label>Title</label>
-            <input type="text" name="Title" id="title">
+            <input type="text" name="Title" id="title" class="title_input">
           </div>
-          <div>
+          <div class="text">
             <label>Text</label>
-            <input type="text" name="Text" id="text">
+            <input type="text" name="Text" id="text" class="text_input">
           </div>
           <div class="form-action-buttons">
             <input type="submit" value="Submit">
@@ -32,12 +32,14 @@
   <table class="list" id="postList">
     <thead>
       <tr>
+        <h2 class="title_section">Archival posts:</h2>
         <div class="blog">
-          <div id="post"></div>
+          <div id="post" class="archival_posts"></div>
         </div>
       </tr>
     </thead>
-    <tbody>
+    <h2 class="title_section">New posts:</h2>
+    <tbody class="body_posts">
 
     </tbody>
   </table>

@@ -1,3 +1,126 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+.formular {
+  width: 90%;
+}
+
+.form_submit {
+  font-family: system-ui;
+  border-bottom: 1px black solid;
+  margin: 15px;
+  padding: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.text_input {
+  width: 75%;
+  margin-bottom: 5px;
+}
+
+.title_input {
+  width: 75%;
+}
+
+.blog {
+  font-family: system-ui;
+  width: 90%;
+  display: flex;
+  border-bottom: 1px black solid;
+  margin: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.archival_posts {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.archival_post {
+  
+  margin: 0 15px 15px 15px;
+  padding: 15px;
+  border: 1px black solid
+}
+
+.list {
+  font-family: system-ui;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.body_posts tr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts {
+  margin: 15px;
+  border: 1px black solid;
+  display: flex;
+  width: 60%;
+}
+
+.post_details {
+  margin: 15px;
+  border-right: 1px black solid;
+}
+.votes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 15px 15px 0;
+}
+
+.votes_p {
+  margin: 0;
+}
+
+.vote_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vote_button {
+  width: 25px;
+  height: 25px;
+}
+
+.button_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.button_column p {
+  margin: 0;
+}
+
+.title_section {
+  font-family: system-ui;
+  margin: 0 15px 0 15px ;
+}
