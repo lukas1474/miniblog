@@ -4,15 +4,44 @@
 <head>
   <meta charset="utf-8">
   <title>Mini blog</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="blog">
-    <p>tutaj będzie blog1</p>
-  </div>
+  <p id="counter"></p>
+  <table class="formular">
+    <tr>
+      <td>
+        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+          <div>
+            <label>Title</label>
+            <input type="text" name="Title" id="title">
+          </div>
+          <div>
+            <label>Text</label>
+            <input type="text" name="Text" id="text">
+          </div>
+          <div class="form-action-buttons">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </td>
+    </tr>
+    <tbody id="posts"></tbody>
+  </table>
+  <table class="list" id="postList">
+    <thead>
+      <tr>
+        <div class="blog">
+          <div id="post"></div>
+        </div>
+      </tr>
+    </thead>
+    <tbody>
 
-  <script src="js/script.js"></script>
+    </tbody>
+  </table>
+  <script src="script.js"></script>
 </body>
 
 </html>
