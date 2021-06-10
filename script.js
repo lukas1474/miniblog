@@ -6,14 +6,14 @@ const onFormSubmit = () => {
 
 const readFormData = () => {
     const formData = {};
-    formData["Title"] = document.getElementById("title").value;
-    formData["Text"] = document.getElementById("text").value;
+    formData['Title'] = document.getElementById('title').value;
+    formData['Text'] = document.getElementById('text').value;
     return formData
 }
 
 const addNewPost = (dataPost) => {
-    const postsList = document.getElementById("postList").getElementsByTagName("tbody")[0];
-    const newRow = postsList.insertRow(postsList.length)
+    const postsList = document.getElementById('postList').getElementsByTagName('tbody')[0];
+    const newRow = postsList.insertRow(postsList.length);
 
     newRow.insertAdjacentHTML(
         'beforeend',
@@ -37,15 +37,15 @@ const addNewPost = (dataPost) => {
                 </div>
             </div>
         </div>`
-    )
+    );
     
     alert('success');
     voting();
 }
 
 const clearForm = () => {
-    document.getElementById("title").value = "";
-    document.getElementById("text").value = "";
+    document.getElementById('title').value = '';
+    document.getElementById('text').value = '';
 }
 
 const removePost = (post) => {
@@ -56,7 +56,7 @@ const removePost = (post) => {
 
 const data = () => {
     const postList = document.getElementById('post');
-    fetch("data.json")
+    fetch('data.json')
       .then(response => response.json())
       .then(data => {
         data.map(function(post){
@@ -84,7 +84,7 @@ const data = () => {
                 </div>`
             )
         });
-    })
+    });
 }
 
 data();
