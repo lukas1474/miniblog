@@ -11,6 +11,28 @@ const readFormData = () => {
     return formData
 }
 
+const voting = () => {
+    const allPosts = document.querySelectorAll('.votes');
+    for (const singlePost of allPosts) {
+
+        const addVotePlus = singlePost.querySelector('.increment');
+        const votesValuePlus = singlePost.querySelector('.numberPlus');
+        let valuePlus = 0;
+        addVotePlus.addEventListener('click', () => {
+            valuePlus += 1;
+            votesValuePlus.innerHTML = valuePlus;
+        })
+
+        const addVoteMinus = singlePost.querySelector('.decrement');
+        const votesValueMinus = singlePost.querySelector('.numberMinus');
+        let valueMinus = 0;
+        addVoteMinus.addEventListener('click', () => {
+            valueMinus += 1;
+            votesValueMinus.innerHTML = valueMinus;
+        })
+    }
+}
+
 const addNewPost = (dataPost) => {
     const postsList = document.getElementById('postList').getElementsByTagName('tbody')[0];
     const newRow = postsList.insertRow(postsList.length);
@@ -27,12 +49,12 @@ const addNewPost = (dataPost) => {
                 <p class="votes_p">votes</p>
                 <div class="vote_buttons">
                     <div class="button_column">
-                        <p id="numberPlus">0</p>
-                        <button id="increment" class="vote_button">+</button>
+                        <p class="numberPlus">0</p>
+                        <button class="increment vote_button">+</button>
                     </div>
                     <div class="button_column">
-                        <p id="numberMinus">0</p>
-                        <button id="decrement" class="vote_button">-</button>
+                        <p class="numberMinus">0</p>
+                        <button class="decrement vote_button">-</button>
                     </div>
                 </div>
             </div>
@@ -66,53 +88,25 @@ const data = () => {
                     <div id="two" class="archival_post">
                         <h2>${post.title}</h2>
                         <p>${post.text}</p>
-                        <button>Delete</button>
                     </div>
                     <div class="votes">
                         <p class="votes_p">votes</p>
                         <div class="vote_buttons">
                             <div class="button_column">
-                                <p id="numberPlus">0</p>
-                                <button id="increment" class="vote_button">+</button>
+                                <p class="numberPlus">0</p>
+                                <button class="increment" class="vote_button">+</button>
                             </div>
                             <div class="button_column">
-                                <p id="numberMinus">0</p>
-                                <button id="decrement" class="vote_button">-</button>
+                                <p class="numberMinus">0</p>
+                                <button class="decrement" class="vote_button">-</button>
                             </div>
                         </div>
                     </div>
                 </div>`
             )
         });
-    });
+    })
+    .then(() => voting());
 }
 
 data();
-
-const voting = () => {
-    const allPosts = document.querySelectorAll('.votes');
-
-    for (const singlePost of allPosts) {
-
-        const addVotePlus = singlePost.querySelector('#increment');
-        const votesValuePlus = singlePost.querySelector('#numberPlus');
-        let valuePlus = 0;
-        addVotePlus.addEventListener('click', function() {
-            valuePlus += 1;
-            votesValuePlus.innerHTML = valuePlus;
-        })
-
-        const addVoteMinus = singlePost.querySelector('#decrement');
-        const votesValueMinus = singlePost.querySelector('#numberMinus');
-        let valueMinus = 0;
-        addVoteMinus.addEventListener('click', function() {
-            valueMinus += 1;
-            votesValueMinus.innerHTML = valueMinus;
-        })
-    }
-}
-
-
-const addVoteMinus = document.getElementById('decrement');
-const votesValueMinus = document.getElementById('numberMinus');
-const valueMinus = 0;
